@@ -411,3 +411,22 @@ function showCustomPrompt(){
         });
     });
 }
+
+let currentDate = document.querySelector('.date h2')
+let dayTime = document.querySelector('.day-time h2')
+
+
+setInterval(() => {
+    const now = new Date();
+
+    let date = now.toDateString();      // Fri May 03 2025
+    let time = now.toLocaleTimeString(); // 12:45:10 PM
+    let hour = time.split(':')[0]
+    
+    let hours = String(hour).padStart(2,'0')
+    time = `${hours}:${time.split(':')[1]}:${time.split(':')[2]}`
+    currentDate.innerHTML = date;
+    dayTime.innerHTML = time
+}, 1000); // ✅ every second
+
+
