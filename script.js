@@ -419,14 +419,69 @@ let dayTime = document.querySelector('.day-time h2')
 setInterval(() => {
     const now = new Date();
 
-    let date = now.toDateString();      // Fri May 03 2025
+    let currentDate = now.toDateString();      // Fri May 03 2025
+
     let time = now.toLocaleTimeString(); // 12:45:10 PM
     let hour = time.split(':')[0]
     
     let hours = String(hour).padStart(2,'0')
     time = `${hours}:${time.split(':')[1]}:${time.split(':')[2]}`
-    currentDate.innerHTML = date;
+    currentDate.innerHTML = currentDate;
     dayTime.innerHTML = time
 }, 1000); // ✅ every second
 
 
+
+const apiKey = '53237438c16be0795730063ff89aabb5';
+
+let cityName = getStoredCity() || prompt("Enter your city name:");
+if(cityName){
+    saveCity(cityName);
+    loadWeather(cityName);
+}
+
+/************ WEATHER ************/
+async function loadWeather(city){
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+    try{
+        const res = await fetch(url);
+        const data = await res.json();
+
+        if(data.cod === '404') return;
+
+        document.querySelector('.city h2').innerText = `${data.name}, India`;
+        document.querySelector('.temp').innerText = `${data.main.temp}° C`;
+        document.querySelector('.weather').innerText = data.weather[0].main;
+        document.querySelector('.humidity').innerText = `Humidity: ${data.main.humidity}%`;
+        document.querySelector('.wind').innerText = `Wind: ${data.wind.speed} km/h`;
+
+    }catch(err){
+        console.log("Weather error", err);
+    }
+}
+
+/************ LOCAL STORAGE ************/
+function saveCity(city){
+    localStorage.setItem('cityName', city);
+    localStorage.setItem('cityTime', Date.now()); // ⏱ timestamp
+}
+
+function getStoredCity(){
+    const savedCity = localStorage.getItem('cityName');
+    const savedTime = localStorage.getItem('cityTime');
+
+    if(!savedCity || !savedTime) return null;
+
+    const hoursPassed = (Date.now() - savedTime) / (1000 * 60 * 60);
+
+    if(hoursPassed >= 24){
+        localStorage.removeItem('cityName');
+        localStorage.removeItem('cityTime');
+        return null;
+    }
+
+    return savedCity;
+}
+
+   
