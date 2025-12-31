@@ -1,0 +1,1160 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Aeonik-bold;
+  src: url(/Project_Assignment/projectDom/fonts/fonnts.com-Aeonik-Bold.ttf);
+}
+@font-face {
+  font-family: Aoenik-regular;
+  src: url(/Project_Assignment/projectDom/fonts/fonnts.com-Aeonik-Regular.ttf);
+}
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+html main, body main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #321A0D;
+  font-family: Aoenik-regular;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 20px;
+  gap: 20px;
+  transition: background-color 0.3s ease;
+}
+@media (max-width: 768px) {
+  html main, body main {
+    padding: 15px 10px;
+    gap: 15px;
+  }
+}
+html main .heading-section, body main .heading-section {
+  display: flex;
+  background-color: #684728;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+@media (max-width: 768px) {
+  html main .heading-section, body main .heading-section {
+    padding: 8px 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+html main .heading-section h1, body main .heading-section h1 {
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: 1.1px;
+}
+@media (max-width: 768px) {
+  html main .heading-section h1, body main .heading-section h1 {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 480px) {
+  html main .heading-section h1, body main .heading-section h1 {
+    font-size: 1rem;
+  }
+}
+html main .heading-section .theme, body main .heading-section .theme {
+  padding: 10px 15px;
+  background-color: #F8F1DC;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #321A0D;
+  cursor: pointer;
+  transition: scale 0.2s ease;
+}
+@media (max-width: 768px) {
+  html main .heading-section .theme, body main .heading-section .theme {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+}
+html main .heading-section .theme:active, body main .heading-section .theme:active {
+  scale: 0.95;
+}
+html main .daily-forecast, body main .daily-forecast {
+  width: 100%;
+  height: 40%;
+  min-height: 300px;
+  background-image: url("https://i.pinimg.com/1200x/55/b5/2e/55b52ea64c17aed3fd779c3bf2293ef1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+  padding: 20px 40px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1024px) {
+  html main .daily-forecast, body main .daily-forecast {
+    padding: 20px 25px;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+  html main .daily-forecast, body main .daily-forecast {
+    padding: 15px 20px;
+    min-height: 250px;
+  }
+}
+html main .daily-forecast .date-time-city, body main .daily-forecast .date-time-city {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+@media (max-width: 1024px) {
+  html main .daily-forecast .date-time-city, body main .daily-forecast .date-time-city {
+    gap: 20px;
+  }
+}
+html main .daily-forecast .date-time-city .all-details .date h2, body main .daily-forecast .date-time-city .all-details .date h2 {
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+@media (max-width: 768px) {
+  html main .daily-forecast .date-time-city .all-details .date h2, body main .daily-forecast .date-time-city .all-details .date h2 {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 480px) {
+  html main .daily-forecast .date-time-city .all-details .date h2, body main .daily-forecast .date-time-city .all-details .date h2 {
+    font-size: 1.5rem;
+  }
+}
+html main .daily-forecast .date-time-city .all-details .day-time h2, body main .daily-forecast .date-time-city .all-details .day-time h2 {
+  font-size: 3rem;
+}
+@media (max-width: 768px) {
+  html main .daily-forecast .date-time-city .all-details .day-time h2, body main .daily-forecast .date-time-city .all-details .day-time h2 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  html main .daily-forecast .date-time-city .all-details .day-time h2, body main .daily-forecast .date-time-city .all-details .day-time h2 {
+    font-size: 1.5rem;
+  }
+}
+html main .daily-forecast .date-time-city .all-details .city h2, body main .daily-forecast .date-time-city .all-details .city h2 {
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+@media (max-width: 768px) {
+  html main .daily-forecast .date-time-city .all-details .city h2, body main .daily-forecast .date-time-city .all-details .city h2 {
+    font-size: 1.2rem;
+  }
+}
+html main .daily-forecast .weather-details, body main .daily-forecast .weather-details {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+@media (max-width: 1024px) {
+  html main .daily-forecast .weather-details, body main .daily-forecast .weather-details {
+    gap: 20px;
+  }
+}
+html main .daily-forecast .weather-details .details-1 .temp, body main .daily-forecast .weather-details .details-1 .temp {
+  font-size: 3rem;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  html main .daily-forecast .weather-details .details-1 .temp, body main .daily-forecast .weather-details .details-1 .temp {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 480px) {
+  html main .daily-forecast .weather-details .details-1 .temp, body main .daily-forecast .weather-details .details-1 .temp {
+    font-size: 2rem;
+  }
+}
+html main .daily-forecast .weather-details .details-1 .weather, body main .daily-forecast .weather-details .details-1 .weather {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  html main .daily-forecast .weather-details .details-1 .weather, body main .daily-forecast .weather-details .details-1 .weather {
+    font-size: 1rem;
+  }
+}
+html main .daily-forecast .weather-details .other-details .font-weight, body main .daily-forecast .weather-details .other-details .font-weight {
+  font-weight: 500;
+  font-size: 1rem;
+}
+@media (max-width: 768px) {
+  html main .daily-forecast .weather-details .other-details .font-weight, body main .daily-forecast .weather-details .other-details .font-weight {
+    font-size: 0.9rem;
+  }
+}
+html main .content, body main .content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+@media (max-width: 1200px) {
+  html main .content, body main .content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  html main .content, body main .content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+@media (max-width: 480px) {
+  html main .content, body main .content {
+    grid-template-columns: 1fr;
+  }
+}
+html main .content .card, body main .content .card {
+  min-height: 350px;
+  overflow: hidden;
+  border-radius: 10px;
+  color: white;
+  position: relative;
+  cursor: pointer;
+  transition: scale 0.2s ease;
+}
+@media (max-width: 768px) {
+  html main .content .card, body main .content .card {
+    min-height: 250px;
+  }
+}
+@media (max-width: 480px) {
+  html main .content .card, body main .content .card {
+    min-height: 200px;
+  }
+}
+html main .content .card:hover, body main .content .card:hover {
+  scale: 1.05;
+}
+html main .content .card:hover .card-effects, body main .content .card:hover .card-effects {
+  bottom: 0;
+}
+html main .content .card:hover:active, body main .content .card:hover:active {
+  scale: 0.95;
+}
+html main .content .to-do-list, body main .content .to-do-list {
+  background-image: url("https://i.pinimg.com/736x/d0/94/1d/d0941dbef7ca565066efae6766318176.jpg");
+  background-size: cover;
+}
+html main .content .to-do-list .card-effects, body main .content .to-do-list .card-effects {
+  position: absolute;
+  bottom: -100%;
+  padding: 10px 20px;
+  background: linear-gradient(rgba(236, 222, 222, 0), black);
+  width: 100%;
+  transition: bottom 0.4s ease;
+  z-index: 1;
+}
+html main .content .daily-planner, body main .content .daily-planner {
+  position: relative;
+}
+html main .content .daily-planner video, body main .content .daily-planner video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+html main .content .daily-planner video::-webkit-media-controls, body main .content .daily-planner video::-webkit-media-controls {
+  display: none !important;
+}
+html main .content .daily-planner video::-webkit-media-controls-enclosure, body main .content .daily-planner video::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+html main .content .daily-planner .card-effects, body main .content .daily-planner .card-effects {
+  position: absolute;
+  bottom: -100%;
+  padding: 10px 20px;
+  background: linear-gradient(rgba(236, 222, 222, 0), black);
+  width: 100%;
+  transition: bottom 0.4s ease;
+  z-index: 1;
+}
+html main .content .motivation, body main .content .motivation {
+  position: relative;
+}
+html main .content .motivation video, body main .content .motivation video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+html main .content .motivation video::-webkit-media-controls, body main .content .motivation video::-webkit-media-controls {
+  display: none !important;
+}
+html main .content .motivation video::-webkit-media-controls-enclosure, body main .content .motivation video::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+html main .content .motivation .card-effects, body main .content .motivation .card-effects {
+  position: absolute;
+  bottom: -100%;
+  padding: 10px 20px;
+  background: linear-gradient(rgba(236, 222, 222, 0), black);
+  width: 100%;
+  transition: bottom 0.4s ease;
+  z-index: 1;
+}
+html main .content .promodo-card, body main .content .promodo-card {
+  background-image: url("https://i.pinimg.com/1200x/6b/6d/64/6b6d647afd59e9333b9f53dbe88f236d.jpg");
+  background-size: cover;
+}
+html main .content .promodo-card .card-effects, body main .content .promodo-card .card-effects {
+  position: absolute;
+  bottom: -100%;
+  padding: 10px 20px;
+  background: linear-gradient(rgba(236, 222, 222, 0), black);
+  width: 100%;
+  transition: bottom 0.4s ease;
+  z-index: 1;
+}
+html main .content .last-card, body main .content .last-card {
+  background-image: url("https://i.pinimg.com/1200x/b9/54/bd/b954bd18d3949cb85a375be478cc0171.jpg");
+  background-size: cover;
+}
+html main .content .last-card .card-effects, body main .content .last-card .card-effects {
+  position: absolute;
+  bottom: -100%;
+  padding: 10px 20px;
+  background: linear-gradient(rgba(236, 222, 222, 0), black);
+  width: 100%;
+  transition: bottom 0.4s ease;
+  z-index: 1;
+}
+html .select, body .select {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(50, 26, 13, 0.98);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  padding: 20px 20px;
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1000;
+  color: #F8F1DC;
+  overflow-y: auto;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+@media (max-width: 768px) {
+  html .select, body .select {
+    padding: 15px 10px;
+  }
+}
+html .select.active, body .select.active {
+  display: flex;
+  animation: slideUp 0.3s ease;
+}
+html .select .close-btn, body .select .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 55px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: #F8F1DC;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+@media (max-width: 768px) {
+  html .select .close-btn, body .select .close-btn {
+    right: 20px;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
+html .select .close-btn:hover, body .select .close-btn:hover {
+  background: rgba(248, 241, 220, 0.2);
+  transform: rotate(90deg);
+}
+html .select h2, body .select h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  html .select h2, body .select h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 480px) {
+  html .select h2, body .select h2 {
+    font-size: 1.5rem;
+  }
+}
+html .select p, body .select p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  html .select p, body .select p {
+    font-size: 1rem;
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+html .forMotivation, body .forMotivation {
+  background: #A77014;
+  background: radial-gradient(ellipse, rgb(167, 112, 20) 50%, rgb(56, 31, 14) 100%);
+  transition: background 0.3s ease;
+}
+html .forMotivation.active, body .forMotivation.active {
+  align-items: center;
+  justify-content: center;
+}
+html .forMotivation .main-moto, body .forMotivation .main-moto {
+  width: 70%;
+  height: 60%;
+  background-color: #FFB118;
+  border: 4px solid rgb(72, 20, 20);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: Aoenik-regular;
+  transition: background-color 0.3s ease;
+}
+@media (max-width: 1024px) {
+  html .forMotivation .main-moto, body .forMotivation .main-moto {
+    width: 85%;
+    height: 70%;
+  }
+}
+@media (max-width: 768px) {
+  html .forMotivation .main-moto, body .forMotivation .main-moto {
+    width: 95%;
+    height: auto;
+    min-height: 400px;
+    padding: 15px;
+  }
+}
+html .forMotivation .main-moto .head, body .forMotivation .main-moto .head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #321A0D;
+  width: 25%;
+  height: 20%;
+  min-height: 50px;
+  padding: 10px 10px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+@media (max-width: 768px) {
+  html .forMotivation .main-moto .head, body .forMotivation .main-moto .head {
+    width: 50%;
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 480px) {
+  html .forMotivation .main-moto .head, body .forMotivation .main-moto .head {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+html .forMotivation .main-moto .quote, body .forMotivation .main-moto .quote {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+html .forMotivation .main-moto .quote h1, body .forMotivation .main-moto .quote h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  html .forMotivation .main-moto .quote h1, body .forMotivation .main-moto .quote h1 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  html .forMotivation .main-moto .quote h1, body .forMotivation .main-moto .quote h1 {
+    font-size: 1.2rem;
+  }
+}
+html .forMotivation .main-moto .author, body .forMotivation .main-moto .author {
+  color: #321A0D;
+  font-size: 1.5rem;
+  text-align: end;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  html .forMotivation .main-moto .author, body .forMotivation .main-moto .author {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 480px) {
+  html .forMotivation .main-moto .author, body .forMotivation .main-moto .author {
+    font-size: 1rem;
+  }
+}
+html .fortodo .navbar, body .fortodo .navbar {
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+  margin-bottom: 20px;
+}
+html .fortodo .navbar h2, body .fortodo .navbar h2 {
+  font-family: Aoenik-regular;
+  font-size: 2.5rem;
+}
+@media (max-width: 768px) {
+  html .fortodo .navbar h2, body .fortodo .navbar h2 {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 480px) {
+  html .fortodo .navbar h2, body .fortodo .navbar h2 {
+    font-size: 1.5rem;
+  }
+}
+html .fortodo .navbar .close-btn, body .fortodo .navbar .close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html .fortodo .todo-content, body .fortodo .todo-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+@media (max-width: 1024px) {
+  html .fortodo .todo-content, body .fortodo .todo-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+html .fortodo .todo-content .leftSide, body .fortodo .todo-content .leftSide {
+  width: 30%;
+  height: 90%;
+  min-height: 400px;
+  background-color: #684728;
+  border-radius: 10px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s ease;
+}
+@media (max-width: 1024px) {
+  html .fortodo .todo-content .leftSide, body .fortodo .todo-content .leftSide {
+    width: 90%;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  html .fortodo .todo-content .leftSide, body .fortodo .todo-content .leftSide {
+    width: 95%;
+    padding: 20px 15px;
+  }
+}
+html .fortodo .todo-content .leftSide #task, body .fortodo .todo-content .leftSide #task {
+  height: 8%;
+  min-height: 45px;
+  border-radius: 5px;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  outline: none;
+}
+html .fortodo .todo-content .leftSide #task::-moz-placeholder, body .fortodo .todo-content .leftSide #task::-moz-placeholder {
+  font-size: 1rem;
+  color: rgba(90, 89, 88, 0.7058823529);
+  font-family: Aoenik-regular;
+}
+html .fortodo .todo-content .leftSide #task::placeholder, body .fortodo .todo-content .leftSide #task::placeholder {
+  font-size: 1rem;
+  color: rgba(90, 89, 88, 0.7058823529);
+  font-family: Aoenik-regular;
+}
+@media (max-width: 768px) {
+  html .fortodo .todo-content .leftSide #task::-moz-placeholder, body .fortodo .todo-content .leftSide #task::-moz-placeholder {
+    font-size: 0.9rem;
+  }
+  html .fortodo .todo-content .leftSide #task::placeholder, body .fortodo .todo-content .leftSide #task::placeholder {
+    font-size: 0.9rem;
+  }
+}
+html .fortodo .todo-content .leftSide #details, body .fortodo .todo-content .leftSide #details {
+  height: 50%;
+  min-height: 150px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  resize: none;
+  outline: none;
+}
+html .fortodo .todo-content .leftSide #details::-moz-placeholder, body .fortodo .todo-content .leftSide #details::-moz-placeholder {
+  font-size: 1rem;
+  font-family: Aoenik-regular;
+  color: rgba(90, 89, 88, 0.7058823529);
+}
+html .fortodo .todo-content .leftSide #details::placeholder, body .fortodo .todo-content .leftSide #details::placeholder {
+  font-size: 1rem;
+  font-family: Aoenik-regular;
+  color: rgba(90, 89, 88, 0.7058823529);
+}
+@media (max-width: 768px) {
+  html .fortodo .todo-content .leftSide #details::-moz-placeholder, body .fortodo .todo-content .leftSide #details::-moz-placeholder {
+    font-size: 0.9rem;
+  }
+  html .fortodo .todo-content .leftSide #details::placeholder, body .fortodo .todo-content .leftSide #details::placeholder {
+    font-size: 0.9rem;
+  }
+}
+html .fortodo .todo-content .leftSide .mark-important, body .fortodo .todo-content .leftSide .mark-important {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  font-family: Aoenik-regular;
+  margin-bottom: 30px;
+}
+html .fortodo .todo-content .leftSide .mark-important #important, body .fortodo .todo-content .leftSide .mark-important #important {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  border-radius: 3px;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+}
+html .fortodo .todo-content .leftSide .mark-important #important:checked, body .fortodo .todo-content .leftSide .mark-important #important:checked {
+  background-color: white;
+  border-color: white;
+}
+html .fortodo .todo-content .leftSide .mark-important #important:checked::after, body .fortodo .todo-content .leftSide .mark-important #important:checked::after {
+  content: "✓";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+html .fortodo .todo-content .leftSide .mark-important #important:hover, body .fortodo .todo-content .leftSide .mark-important #important:hover {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+html .fortodo .todo-content .leftSide .addTask, body .fortodo .todo-content .leftSide .addTask {
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #FFB118;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: scale 0.1s linear;
+}
+@media (max-width: 768px) {
+  html .fortodo .todo-content .leftSide .addTask, body .fortodo .todo-content .leftSide .addTask {
+    font-size: 0.9rem;
+  }
+}
+html .fortodo .todo-content .leftSide .addTask:active, body .fortodo .todo-content .leftSide .addTask:active {
+  scale: 0.95;
+}
+html .fortodo .todo-content .rightSide, body .fortodo .todo-content .rightSide {
+  width: 60%;
+  height: 90%;
+  min-height: 400px;
+  background-color: #684728;
+  border-radius: 20px;
+  overflow: auto;
+  padding: 20px 20px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: background-color 0.3s ease;
+}
+@media (max-width: 1024px) {
+  html .fortodo .todo-content .rightSide, body .fortodo .todo-content .rightSide {
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  html .fortodo .todo-content .rightSide, body .fortodo .todo-content .rightSide {
+    width: 95%;
+    padding: 15px;
+  }
+}
+html .fortodo .todo-content .rightSide .todo-work, body .fortodo .todo-content .rightSide .todo-work {
+  width: 100%;
+  background-color: #F8F1DC;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  html .fortodo .todo-content .rightSide .todo-work, body .fortodo .todo-content .rightSide .todo-work {
+    padding: 10px 15px;
+  }
+}
+html .fortodo .todo-content .rightSide .todo-work .todotask, body .fortodo .todo-content .rightSide .todo-work .todotask {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+html .fortodo .todo-content .rightSide .todo-work .todotask .head, body .fortodo .todo-content .rightSide .todo-work .todotask .head {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+html .fortodo .todo-content .rightSide .todo-work .todotask .head h1, body .fortodo .todo-content .rightSide .todo-work .todotask .head h1 {
+  font-size: 1.2rem;
+  font-family: Aoenik-regular;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  html .fortodo .todo-content .rightSide .todo-work .todotask .head h1, body .fortodo .todo-content .rightSide .todo-work .todotask .head h1 {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  html .fortodo .todo-content .rightSide .todo-work .todotask .head h1, body .fortodo .todo-content .rightSide .todo-work .todotask .head h1 {
+    font-size: 0.9rem;
+  }
+}
+html .fortodo .todo-content .rightSide .todo-work .todotask .head .imp, body .fortodo .todo-content .rightSide .todo-work .todotask .head .imp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-family: Aoenik-regular;
+  border-radius: 50%;
+  padding: 2px 6px;
+  background-color: red;
+  scale: 0.9;
+  color: white;
+}
+html .fortodo .todo-content .rightSide .todo-work .todotask .btns, body .fortodo .todo-content .rightSide .todo-work .todotask .btns {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+@media (max-width: 480px) {
+  html .fortodo .todo-content .rightSide .todo-work .todotask .btns, body .fortodo .todo-content .rightSide .todo-work .todotask .btns {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+html .fortodo .todo-content .rightSide .todo-work .todotask .btns .complete, body .fortodo .todo-content .rightSide .todo-work .todotask .btns .complete {
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  html .fortodo .todo-content .rightSide .todo-work .todotask .btns .complete, body .fortodo .todo-content .rightSide .todo-work .todotask .btns .complete {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+html .fortodo .todo-content .rightSide .todo-work .todotask .btns .complete:active, body .fortodo .todo-content .rightSide .todo-work .todotask .btns .complete:active {
+  scale: 0.95;
+}
+html .fortodo .todo-content .rightSide .todo-work .todotask .btns .Expand, body .fortodo .todo-content .rightSide .todo-work .todotask .btns .Expand {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #321A0D;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+@media (max-width: 768px) {
+  html .fortodo .todo-content .rightSide .todo-work .todotask .btns .Expand, body .fortodo .todo-content .rightSide .todo-work .todotask .btns .Expand {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+html .fortodo .todo-content .rightSide .todo-work .todotask .btns .Expand:active, body .fortodo .todo-content .rightSide .todo-work .todotask .btns .Expand:active {
+  scale: 0.95;
+}
+html .fortodo .todo-content .rightSide .todo-work .desc, body .fortodo .todo-content .rightSide .todo-work .desc {
+  display: none;
+}
+@media (max-width: 768px) {
+  html .fortodo .todo-content .rightSide .todo-work .desc, body .fortodo .todo-content .rightSide .todo-work .desc {
+    font-size: 0.9rem;
+  }
+}
+html .forDaily, body .forDaily {
+  overflow-y: auto;
+  max-height: 100vh;
+}
+html .forDaily::-webkit-scrollbar, body .forDaily::-webkit-scrollbar {
+  width: 5px;
+}
+html .forDaily::-webkit-scrollbar-track, body .forDaily::-webkit-scrollbar-track {
+  background: #321A0D;
+  border-radius: 10px;
+}
+html .forDaily::-webkit-scrollbar-thumb, body .forDaily::-webkit-scrollbar-thumb {
+  background: #FFB118;
+  border-radius: 10px;
+}
+html .forDaily::-webkit-scrollbar-thumb:hover, body .forDaily::-webkit-scrollbar-thumb:hover {
+  background: #e09d0f;
+}
+html .forDaily .nav, body .forDaily .nav {
+  display: flex;
+  width: 100%;
+  padding: 0px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: Aoenik-regular;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  html .forDaily .nav, body .forDaily .nav {
+    padding: 0px 10px;
+  }
+}
+html .forDaily .nav h2, body .forDaily .nav h2 {
+  margin: 0;
+}
+@media (max-width: 768px) {
+  html .forDaily .nav h2, body .forDaily .nav h2 {
+    font-size: 2rem;
+  }
+}
+html .forDaily .nav p, body .forDaily .nav p {
+  font-size: 1rem;
+}
+@media (max-width: 768px) {
+  html .forDaily .nav p, body .forDaily .nav p {
+    font-size: 0.9rem;
+  }
+}
+html .forDaily .dailyplanner, body .forDaily .dailyplanner {
+  width: 100%;
+  background-color: #684728;
+  padding: 10px 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  transition: background-color 0.3s ease;
+}
+@media (max-width: 1024px) {
+  html .forDaily .dailyplanner, body .forDaily .dailyplanner {
+    padding: 10px 20px;
+    gap: 15px;
+  }
+}
+@media (max-width: 768px) {
+  html .forDaily .dailyplanner, body .forDaily .dailyplanner {
+    padding: 10px 15px;
+  }
+}
+html .forDaily .dailyplanner .div-part, body .forDaily .dailyplanner .div-part {
+  width: 49%;
+  background-color: #321A0D;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 10px 20px;
+  gap: 10px;
+  transition: background-color 0.3s ease;
+}
+@media (max-width: 768px) {
+  html .forDaily .dailyplanner .div-part, body .forDaily .dailyplanner .div-part {
+    width: 100%;
+    padding: 10px 15px;
+  }
+}
+@media (max-width: 768px) {
+  html .forDaily .dailyplanner .div-part .timing, body .forDaily .dailyplanner .div-part .timing {
+    font-size: 0.9rem;
+  }
+}
+html .forDaily .dailyplanner .div-part .textPart, body .forDaily .dailyplanner .div-part .textPart {
+  background-color: #321A0D;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 1.2rem;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  html .forDaily .dailyplanner .div-part .textPart, body .forDaily .dailyplanner .div-part .textPart {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  html .forDaily .dailyplanner .div-part .textPart, body .forDaily .dailyplanner .div-part .textPart {
+    font-size: 0.9rem;
+  }
+}
+html .forPromodo .nav, body .forPromodo .nav {
+  display: flex;
+  width: 100%;
+  padding: 0px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: Aoenik-regular;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  html .forPromodo .nav, body .forPromodo .nav {
+    padding: 0px 10px;
+  }
+}
+html .forPromodo .nav h2, body .forPromodo .nav h2 {
+  margin: 0;
+}
+@media (max-width: 768px) {
+  html .forPromodo .nav h2, body .forPromodo .nav h2 {
+    font-size: 2rem;
+  }
+}
+html .forPromodo .nav p, body .forPromodo .nav p {
+  font-size: 1rem;
+}
+@media (max-width: 768px) {
+  html .forPromodo .nav p, body .forPromodo .nav p {
+    font-size: 0.9rem;
+  }
+}
+html .forPromodo .pomo-timer, body .forPromodo .pomo-timer {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(167, 113, 20, 0.2823529412);
+  padding: 50px 60px;
+  border-radius: 20px;
+  height: 50%;
+  width: 60%;
+}
+@media (max-width: 1024px) {
+  html .forPromodo .pomo-timer, body .forPromodo .pomo-timer {
+    width: 80%;
+    padding: 40px 50px;
+  }
+}
+@media (max-width: 768px) {
+  html .forPromodo .pomo-timer, body .forPromodo .pomo-timer {
+    width: 90%;
+    height: auto;
+    padding: 30px 20px;
+  }
+}
+@media (max-width: 480px) {
+  html .forPromodo .pomo-timer, body .forPromodo .pomo-timer {
+    width: 95%;
+    padding: 20px 15px;
+  }
+}
+html .forPromodo .pomo-timer .timer, body .forPromodo .pomo-timer .timer {
+  font-size: 8rem;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+@media (max-width: 1024px) {
+  html .forPromodo .pomo-timer .timer, body .forPromodo .pomo-timer .timer {
+    font-size: 6rem;
+  }
+}
+@media (max-width: 768px) {
+  html .forPromodo .pomo-timer .timer, body .forPromodo .pomo-timer .timer {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 480px) {
+  html .forPromodo .pomo-timer .timer, body .forPromodo .pomo-timer .timer {
+    font-size: 3rem;
+  }
+}
+html .forPromodo .pomo-timer .btns, body .forPromodo .pomo-timer .btns {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+html .forPromodo .pomo-timer .btns button, body .forPromodo .pomo-timer .btns button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #e09d0f;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  box-shadow: 5px 5px 0px black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+@media (max-width: 768px) {
+  html .forPromodo .pomo-timer .btns button, body .forPromodo .pomo-timer .btns button {
+    font-size: 1rem;
+    padding: 8px 15px;
+    box-shadow: 3px 3px 0px black;
+  }
+}
+@media (max-width: 480px) {
+  html .forPromodo .pomo-timer .btns button, body .forPromodo .pomo-timer .btns button {
+    font-size: 0.9rem;
+    padding: 7px 12px;
+  }
+}
+html .forPromodo .pomo-timer .btns button:active, body .forPromodo .pomo-timer .btns button:active {
+  scale: 0.95;
+}
+html .custom-prompt-overlay, body .custom-prompt-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+html .custom-prompt-box, body .custom-prompt-box {
+  background: linear-gradient(135deg, #684728 0%, #321A0D 100%);
+  padding: 40px 50px;
+  border-radius: 20px;
+  border: 3px solid #FFB118;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  min-width: 500px;
+  animation: slideUp 0.4s ease;
+}
+html .custom-prompt-box h2, body .custom-prompt-box h2 {
+  color: #FFB118;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-family: Aeonik-bold;
+}
+html .custom-prompt-box p, body .custom-prompt-box p {
+  color: #F8F1DC;
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  font-family: Aoenik-regular;
+}
+html .custom-prompt-box .prompt-buttons, body .custom-prompt-box .prompt-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+html .custom-prompt-box .prompt-btn, body .custom-prompt-box .prompt-btn {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: Aoenik-regular;
+  background-color: #F8F1DC;
+  color: #321A0D;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+html .custom-prompt-box .prompt-btn:hover, body .custom-prompt-box .prompt-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+html .custom-prompt-box .prompt-btn:active, body .custom-prompt-box .prompt-btn:active {
+  transform: translateY(0);
+  scale: 0.98;
+}
+html .custom-prompt-box .prompt-btn.lock-in, body .custom-prompt-box .prompt-btn.lock-in {
+  background: linear-gradient(135deg, #FFB118, #e09d0f);
+  color: white;
+  font-weight: 700;
+  border: 2px solid #fff;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=style.css.map */

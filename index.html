@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="dashboard-1671173-1418912-removebg-preview.png">
+    <title>Productivity Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <main>
+        <div class="heading-section">
+            <h1>Productivity DashBoard</h1>
+            <button class="theme">Change Theme</button>
+        </div>
+
+        <div class="daily-forecast">
+            <div class="date-time-city">
+                <div class="all-details">
+                    <div class="date">
+                        <h2>4 May, 2025</h2>
+                    </div>
+                    <div class="day-time">
+                        <h2>Sunday, 12:29:05 AM</h2>
+                    </div>
+                </div>
+                <div class="city">
+                    <h2>Firozabad (U.P.)</h2>
+                </div>
+            </div>
+            
+            <div class="weather-details">
+                <div class="details-1">
+                    <div class="temp">21° C</div>
+                    <div class="weather">Light Rain</div>
+                </div>
+                <div class="other-details">
+                    <h3 class="percipitation font-weight">Percipitation: 35%</h3>
+                    <h3 class="humidity font-weight">Humidity: 40%</h3>
+                    <h3 class="wind font-weight">Wind: 10km/h</h3>
+                </div>
+            </div>
+        </div>
+
+        <section class="content">
+            <!-- To-Do List Card -->
+            <div class="to-do-list card" data-target="fortodo">
+                <div class="card-effects">
+                    <h2>To-Do List</h2>
+                </div>
+            </div>
+            
+            <!-- Daily Planner Card -->
+            <div class="daily-planner card" data-target="forDaily">
+                <video autoplay loop muted playsinline disablepictureinpicture 
+                controlslist="nodownload nofullscreen noremoteplayback" src="/Project_Assignment/projectDom/From KlickPin CF Pinterest Pin-2111131069644845.mp4"></video>
+                <div class="card-effects">
+                    <h2>Daily Planner</h2>
+                </div>
+            </div>
+            
+            <!-- Motivation Card -->
+            <div class="motivation card" data-target="forMotivation">
+                <video autoplay loop muted playsinline disablepictureinpicture 
+                controlslist="nodownload nofullscreen noremoteplayback" src="/Project_Assignment/projectDom/From KlickPin CF New Red motion background for reels and shorts in 2025 _ Motion graphics trends Film texture Motion graphics tutorial.mp4"></video>
+                <div class="card-effects">
+                    <h2>Motivation</h2>
+                </div>
+            </div>
+            
+            <div class="promodo-card card" data-target="forPromodo">
+                <div class="card-effects">
+                    <h2>Pomodoro Timer</h2>
+                </div>
+            </div>
+            
+            <div class="last-card card" data-target="forLoadingMore">
+                <div class="card-effects">
+                    <h2>Coming Soon</h2>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="fortodo select">
+        <div class="navbar">
+            <h2>Your Personalized Task List</h2>
+            <button class="close-btn">✕</button>
+        </div>
+        <div class="todo-content">
+            <div class="leftSide">
+                <input type="text" name="text" placeholder="Enter Task" id="task" autocomplete="off">
+                <textarea placeholder="Enter Details for Task" id="details"></textarea>
+                <div class="mark-important">
+                    <input type="checkbox" name="imp" id="important">
+                    <label for="important">Mark as important</label>
+                </div>
+                <button class="addTask">Add Task</button>
+            </div>
+            <div class="rightSide">
+                <div class="todo-work">
+                    <div class="todotask">
+                        <div class="head">
+                            <h1>Frontend Project for Cohort</h1>
+                            <div class="imp">Imp</div>
+                            
+                        </div>
+                        <div class="btns">
+                            <button class="complete">Mark as Completed</button>
+                            <button class="Expand">Expand</button>
+                        </div>
+                    </div>
+                    
+                    <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex accusantium reiciendis soluta corporis non maiores culpa nihil sapiente, temporibus dolorum! Blanditiis, ad? Accusamus fugiat consequuntur modi aliquam consequatur sapiente repellendus?</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="forDaily select">
+        <div class="close-btn">✕</div>
+        <div class="nav">
+            <h2>Daily Planner</h2>
+            <p>Plan your day effectively...</p>
+        </div>
+        <div class="dailyplanner">
+        </div>  
+    </section>
+
+    <section class="forMotivation select">
+        <div class="close-btn">✕</div>
+        <div class="main-moto">
+            <div class="head">Quote of the Day</div>
+            <div class="quote"><h1></h1></div>
+            <p class="author"></p>
+        </div>
+        <p>Get inspired every day...</p>
+    </section>
+
+    <section class="forPromodo select">
+        <div class="close-btn">✕</div>
+        <div class="nav">
+            <h2>Pomodoro Timer</h2>
+            <p>Stay focused with timed work sessions...</p>
+        </div>
+
+        <div class="pomo-timer">
+            <div class="timer">25:00</div>
+            <div class="btns">
+                <button class="start-timer">Start</button>
+                <button class="pause-timer">Pause</button>
+                <button class="reset-timer">Reset</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="forLoadingMore select">
+        <div class="close-btn">✕</div>
+        <h2>Coming Soon</h2>
+        <p>More features loading... Stay tuned!</p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
