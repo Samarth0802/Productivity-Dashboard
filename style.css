@@ -266,7 +266,7 @@ html main .content .to-do-list .card-effects, body main .content .to-do-list .ca
 html main .content .daily-planner, body main .content .daily-planner {
   position: relative;
 }
-html main .content .daily-planner video, body main .content .daily-planner video {
+html main .content .daily-planner img, body main .content .daily-planner img {
   position: absolute;
   top: 0;
   left: 0;
@@ -277,10 +277,10 @@ html main .content .daily-planner video, body main .content .daily-planner video
   z-index: 0;
   pointer-events: none;
 }
-html main .content .daily-planner video::-webkit-media-controls, body main .content .daily-planner video::-webkit-media-controls {
+html main .content .daily-planner img::-webkit-media-controls, body main .content .daily-planner img::-webkit-media-controls {
   display: none !important;
 }
-html main .content .daily-planner video::-webkit-media-controls-enclosure, body main .content .daily-planner video::-webkit-media-controls-enclosure {
+html main .content .daily-planner img::-webkit-media-controls-enclosure, body main .content .daily-planner img::-webkit-media-controls-enclosure {
   display: none !important;
 }
 html main .content .daily-planner .card-effects, body main .content .daily-planner .card-effects {
@@ -295,7 +295,7 @@ html main .content .daily-planner .card-effects, body main .content .daily-plann
 html main .content .motivation, body main .content .motivation {
   position: relative;
 }
-html main .content .motivation video, body main .content .motivation video {
+html main .content .motivation img, body main .content .motivation img {
   position: absolute;
   top: 0;
   left: 0;
@@ -306,10 +306,10 @@ html main .content .motivation video, body main .content .motivation video {
   z-index: 0;
   pointer-events: none;
 }
-html main .content .motivation video::-webkit-media-controls, body main .content .motivation video::-webkit-media-controls {
+html main .content .motivation img::-webkit-media-controls, body main .content .motivation img::-webkit-media-controls {
   display: none !important;
 }
-html main .content .motivation video::-webkit-media-controls-enclosure, body main .content .motivation video::-webkit-media-controls-enclosure {
+html main .content .motivation img::-webkit-media-controls-enclosure, body main .content .motivation img::-webkit-media-controls-enclosure {
   display: none !important;
 }
 html main .content .motivation .card-effects, body main .content .motivation .card-effects {
